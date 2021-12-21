@@ -1,0 +1,17 @@
+name: Lint 🔥 That Thang!!!
+
+on: push
+
+jobs:
+  lint-thang:
+    name: Lint code base
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Lint 🔥 That Thang!!!
+        uses: github/super-linter@v3
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
