@@ -1,9 +1,10 @@
 import { Router } from 'express';
+import { createConcept, getConcepts } from '../controllers/concepts';
 
 const router = Router();
 
-router.get('/', (req, res) => {
-  res.send('Hello Concepts');
-});
+router.get('/', getConcepts);
+
+router.post('/', createConcept);
 
 export default router;
